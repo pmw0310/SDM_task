@@ -15,6 +15,12 @@ console.log('Please enter a number.');
 
 rl.on('line', (line) => {
     const num = Number(line);
+
+    if (isNaN(line)) {
+        console.log("It's not a number.");
+        return;
+    }
+
     multi(num);
     rl.close();
 });
